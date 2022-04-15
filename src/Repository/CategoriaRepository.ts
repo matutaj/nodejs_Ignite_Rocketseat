@@ -1,11 +1,8 @@
 import { ModelCategoria } from "../model/Categoria"
+import { ICategoriaRepository, IcreateCategoria } from "./ICategoriaRespository";
 
-interface IcreateCategoria{
-    name: string;
-    description:string;
-}
 
-class CategoriaRepository {
+class CategoriaRepository  implements ICategoriaRepository{
 
     private categorias : ModelCategoria[];
 
