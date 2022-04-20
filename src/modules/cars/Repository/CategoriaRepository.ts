@@ -7,7 +7,7 @@ class CategoriaRepository  implements ICategoriaRepository{
     private categorias : ModelCategoria[];
 
     constructor (){
-        this.categorias= []
+        this.categorias=[]
     }
 
     create({name, description}:IcreateCategoria):void{
@@ -27,7 +27,7 @@ class CategoriaRepository  implements ICategoriaRepository{
     }
 
     findByName(name:string):ModelCategoria{
-        const categoria = this.categorias.find(cate=>cate.name === name)
+        const categoria = this.categorias.find(veri=>veri.name === name)
 
         return categoria;
     }

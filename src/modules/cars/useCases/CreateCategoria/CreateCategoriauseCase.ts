@@ -1,4 +1,4 @@
-import { ICategoriaRepository, IcreateCategoria } from "../Repository/ICategoriaRespository";
+import { ICategoriaRepository } from "../../Repository/ICategoriaRespository";
 
 interface IRequest{
     name:string;
@@ -6,7 +6,7 @@ interface IRequest{
 }
 
 
-class CreateCategoriaService{
+class CreateCategoriauseCase{
     constructor(private categoriaRespository:ICategoriaRepository){}
 
     execute({name, description}:IRequest):void{
@@ -20,4 +20,4 @@ class CreateCategoriaService{
     }
 }
 
-export {CreateCategoriaService}
+export {CreateCategoriauseCase}
