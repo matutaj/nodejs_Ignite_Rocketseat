@@ -6,8 +6,17 @@ class EspecificacaoRepository  {
 
         private especificacao: Especificacao[];
 
-        constructor(){
+        private static INTANCE: EspecificacaoRepository;
+
+       private constructor(){
             this.especificacao=[]
+        }
+
+        public static getInstance():EspecificacaoRepository{
+                if(!EspecificacaoRepository.INTANCE){
+                    EspecificacaoRepository.INTANCE=  new EspecificacaoRepository();
+                }
+                return EspecificacaoRepository.INTANCE
         }
     create({name,description}:ICreateEspecificacao):void{
 

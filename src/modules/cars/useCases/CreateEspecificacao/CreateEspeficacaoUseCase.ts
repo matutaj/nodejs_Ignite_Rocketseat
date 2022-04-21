@@ -1,8 +1,8 @@
-import {ICreateEspecificacao}from '../Repository/IespecificacaoRepository'
-import {EspecificacaoRepository} from '../Repository/EspecificacaoRepository'
+import {ICreateEspecificacao}from '../../Repository/IespecificacaoRepository'
+import {EspecificacaoRepository} from '../../Repository/EspecificacaoRepository'
 
 
-class CreateEspecificacaoService{
+class CreateEspecificacaoUseCase{
     constructor(private createEspecificacao:EspecificacaoRepository){}
 
     execute({name,description}:ICreateEspecificacao):void{
@@ -18,4 +18,4 @@ class CreateEspecificacaoService{
 
 
 
-export {CreateEspecificacaoService}
+export {CreateEspecificacaoUseCase}
